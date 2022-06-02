@@ -1,7 +1,9 @@
+import ItemListContainer from "./ItemListContainer"
+
 const Main = () => {
     return(
         <main>
-            <p>leremp ipsum dolor</p>
+            <ItemListContainer Title="Bienvenido" ClassObject="message-main"/>
         </main>
     )
 }

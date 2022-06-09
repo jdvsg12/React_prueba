@@ -10,7 +10,7 @@ const App = () => {
   
   return(
     <>
-    <Header Test="Hola mundo!!!"/>
+    <Header Test="LogoText"/>
     <Main />
     <Footer />
     </>

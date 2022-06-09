@@ -30,12 +30,13 @@ nav a {
 }
 
 main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0;
   padding: 2rem;
   background: #E5E7E9;
-  height: 500px;
 }
-
 
 footer {
   display: flex;
@@ -46,11 +47,12 @@ footer {
   color: white;
 }
 
-.message-main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 5rem;
+.ItemListContainer {
+
+  display: grid;
+  grid-template-rows: repeat(1, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10rem;
 }
 
 .cardItem {
@@ -62,23 +64,29 @@ footer {
   align-items: center;
   background: rgb(255, 255, 255);
   box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+  padding: 1rem;
 
 }
 
 .cardItem img {
-  clip-path: circle(40% at 50% 50%);
-  width: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
   margin: 0;
 }
 
 .cardItem p {
-  color:rgb(0, 0, 255);
+  color:rgb(205, 188, 34);
   text-align: center;
   font-weight: bold;
   font-size: 2rem;
+  line-height: 1rem;
   margin: 0;
 }
 
+.cardItem h1 {
+  margin: 0;
+  line-height: 1rem;
+}
 .cardItem button {
   margin: 0;
 }

@@ -15,7 +15,7 @@ function ItemCount({stock, initial, onAdd }) {
     }
 
     const confirm = () => {
-       onAdd = console.log(count)
+        console.log(count)
     }
 return (
     <div className="cardItem">

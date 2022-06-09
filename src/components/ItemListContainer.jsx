@@ -4,8 +4,8 @@ const ItemListContainer = () => {
 
     return (
         <div>
-        <ItemCount stock={5} initial={1} onAdd={onAdd} />
-     
+        <ItemCount stock={5} initial={1} onAdd={() => {}} />
+        
         </div>
 
     )

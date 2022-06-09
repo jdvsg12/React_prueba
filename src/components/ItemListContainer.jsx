@@ -1,11 +1,13 @@
+import ItemCount from "../components/ItemCount.jsx"
 
-
-const ItemListContainer = ({Title, ClassObject}) => {
+const ItemListContainer = () => {
 
     return (
-        <p className={ClassObject}>
-            {Title}
-        </p>
+        <div>
+        <ItemCount stock={5} initial={1} onAdd={onAdd} />
+     
+        </div>
+
     )
 
 }

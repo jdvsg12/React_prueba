@@ -6,9 +6,9 @@ const Header = ({ Test }) => {
         <header>
             <h1>{Test}</h1>
             <nav>
-                <a href="#">Link1</a>
-                <a href="#">Link2</a>
-                <a href="#">Link3</a>
+                <a href="/#">categoria 1</a>
+                <a href="/#">categoria 2</a>
+                <a href="/#">categoria 3</a>
                 <CartWidgets />
 
             </nav>

@@ -1,13 +1,14 @@
 import React from 'react';
-import Item from './Item';
+import Items from './Items';
 
 function ItemList({ products }) {
 
     return (
         products.map(products =>
-                <Item
+                <Items
                     id={products.id}
-                    name={products.name}
+                    title={products.title}
+                    price={products.price}
                     image={products.image}
                     alt={products.alt}
                     key={products.id}

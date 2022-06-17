@@ -4,6 +4,7 @@ import Items from './Items';
 function ItemList({ products }) {
 
     return (
+        
         products.map(products =>
                 <Items
                     id={products.id}
@@ -14,7 +15,7 @@ function ItemList({ products }) {
                     key={products.id}
                 />
         )
-
+            
     )
 }
 

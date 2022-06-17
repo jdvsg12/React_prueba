@@ -1,27 +1,24 @@
 import React from 'react';
 import { useState, useEffect } from "react"
-import { singleProduct } from '../utils/products';
-import { productPromise } from '../utils/productsPromise';
+import { getProductsPromise } from '../utils/productsPromise';
 import ItemDetail from './ItemDetail';
 
 
 
 const ItemDetailContainer = () => {
 
-    const [product, setProduct] = useState({})
+    const [product, setProduct] = useState([])
 
+
+    
     useEffect(() => {
-        productPromise(1000, singleProduct)
-            .then(product => {
-                setProduct(product);
-            })
+        getProductsPromise(1000, 1)
+        .then(resolve => {
+            setProduct(resolve)
+        })
+        }, [])
 
-            .catch(error => {
-                console.log(error);
-            })
-    }, [])
-
-    console.log(product)
+        console.log(product)    
     return (
         <div className="ItemDetailContainer">
             <ItemDetail {...product} />

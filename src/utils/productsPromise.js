@@ -1,3 +1,5 @@
+import { products } from '../utils/products';
+
 
 export const productsPromise = (time, task) => {
 
@@ -10,13 +12,12 @@ export const productsPromise = (time, task) => {
 
 }
 
-export const productPromise = (time, task) => {
-
-    return new Promise((resolve) => {
-
+export const getProductsPromise = (time, id) => {
+    return new Promise (resolve => {
         setTimeout(() => {
-            resolve(task);
+            resolve(products.find(prod => prod.id === id))
         }, time)
-    })
 
+    })
 }
+

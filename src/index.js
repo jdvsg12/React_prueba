@@ -3,15 +3,18 @@ import ReactDOM from "react-dom/client";
 import Header from "../src/components/Header.jsx";
 import Main from "../src/components/Main.jsx";
 import Footer from "../src/components/Footer.jsx";
+import { BrowserRouter } from "react-router-dom";
 import "./index.css";
+import 'react-loading-skeleton/dist/skeleton.css'
+
 
 const App = () => {
   return (
-    <>
-      <Header Test="LogoText" />
+    <BrowserRouter>
+      <Header Test="MiVenta" />
       <Main />
       <Footer />
-    </>
+    </BrowserRouter>
   );
 };
 

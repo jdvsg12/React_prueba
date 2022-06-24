@@ -5,13 +5,13 @@ import Main from "../src/components/Main.jsx";
 import Footer from "../src/components/Footer.jsx";
 import { BrowserRouter } from "react-router-dom";
 import "./index.css";
-import 'react-loading-skeleton/dist/skeleton.css'
+
 
 
 const App = () => {
   return (
     <BrowserRouter>
-      <Header Test="MiVenta" />
+      <Header Test="MiVenta"/>
       <Main />
       <Footer />
     </BrowserRouter>

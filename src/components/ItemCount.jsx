@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function ItemCount({stock, initial, onAdd }) {
+function ItemCount({ stock, initial, onAdd }) {
 
     const [count, setCount] = useState(initial)
 
@@ -10,24 +10,24 @@ function ItemCount({stock, initial, onAdd }) {
     }
 
     const itemsRemove = () => {
-        if(count <= 0) return;
-        setCount(count - 1)   
+        if (count <= 0) return;
+        setCount(count - 1)
     }
 
-    const confirm = () => {
+    const quantityToAdd = () => {
         onAdd(count)
     }
-return (
-    <div className="cardItem">
-        <p>Tenemos {count} items</p>
-        <div className="btnCount">
-        <button onClick={itemsAdd}>+</button>
-        <button onClick={itemsRemove}>-</button>
-        <button onClick={confirm}>Confirmar</button>
-
+    return (
+        <div className="countItem">
+            <p>(Disponible {stock})</p>
+            <div className="btnCount">
+                <button onClick={itemsRemove}>-</button>
+                <p>{count}</p>
+                <button onClick={itemsAdd}>+</button>
+                <button onClick={quantityToAdd}>Confirmar</button>
+            </div>
         </div>
-    </div>
-)
+    )
 }
 
 

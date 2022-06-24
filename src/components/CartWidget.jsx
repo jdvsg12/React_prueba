@@ -1,5 +1,5 @@
 
-const CartWidgets = () => {
+export const CartWidgets = () => {
 
     return (
         <span className="material-symbols-outlined">
@@ -10,4 +10,3 @@ const CartWidgets = () => {
 }
 
 
-export default CartWidgets

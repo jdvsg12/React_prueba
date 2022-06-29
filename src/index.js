@@ -5,14 +5,15 @@ import Main from "../src/components/Main.jsx";
 import Footer from "../src/components/Footer.jsx";
 import { BrowserRouter } from "react-router-dom";
 import "./index.css";
-
-
+import MyDataCart from "./components/CartContext.jsx";
 
 const App = () => {
   return (
     <BrowserRouter>
-      <Header Test="MiVenta"/>
-      <Main />
+      <MyDataCart>
+        <Header Test="MiVenta" />
+        <Main />
+      </MyDataCart>
       <Footer />
     </BrowserRouter>
   );

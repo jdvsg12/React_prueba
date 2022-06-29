@@ -1,18 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import ItemCount from './ItemCount'
+import { context } from './CartContext';
 import { Cart } from './Cart';
 import './itemDetailContainer-model.css'
 
 function ItemDetail({ id, title, image, price, count, description }) {
 
+    const data = useContext(context)
     const [quantityToAdd, setQuantityToAdd] = useState(true)
+
+    
+
 
     const onAdd = (quantityToAdd) => {
 
         setQuantityToAdd(quantityToAdd)
+
+        data.addCantItemToCart(id, title, image, price, description)
+
     }
 
-    console.log(quantityToAdd)
+    console.log(data)
+
+
 
     return (
         <div className="cardDetail" key={id}>

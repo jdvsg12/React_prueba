@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import { useState, useEffect } from "react"
 import { getProductsIdPromise } from '../utils/productsPromise';
 import { useParams } from 'react-router-dom'

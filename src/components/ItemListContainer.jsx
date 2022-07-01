@@ -18,7 +18,7 @@ const ItemListContainer = () => {
 
         setLoading(true)
 
-        productsPromise(3000, category)
+        productsPromise(1000, category)
             .then(resolve => {
                 setItems(resolve)
                 setLoading(false)

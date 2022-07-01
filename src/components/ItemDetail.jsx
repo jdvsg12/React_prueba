@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import ItemCount from './ItemCount'
 import { context } from './CartContext';
-import { Cart } from './Cart';
+import { ButtonCart } from './ButtonCart';
 import './itemDetailContainer-model.css'
 
 function ItemDetail({ id, title, image, price, count, description }) {
@@ -16,12 +16,11 @@ function ItemDetail({ id, title, image, price, count, description }) {
 
         setQuantityToAdd(quantityToAdd)
 
-        data.addCantItemToCart(id, title, image, price, description)
+        const items = {id, title, image, price, description, quantityToAdd}
+
+        data.addItemToCart(items, quantityToAdd)
 
     }
-
-    console.log(data)
-
 
 
     return (
@@ -32,7 +31,7 @@ function ItemDetail({ id, title, image, price, count, description }) {
                 <h2>$ {price}</h2>
                 <p>{description}</p>
                 <div>
-                    {quantityToAdd === true ? <ItemCount stock={count} initial={1} onAdd={onAdd} /> : <Cart />}
+                    {quantityToAdd === true ? <ItemCount stock={count} initial={1} onAdd={onAdd} /> : <ButtonCart />}
                 </div>
             </div>
 

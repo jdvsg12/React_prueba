@@ -7,21 +7,23 @@ import './itemDetailContainer-model.css'
 function ItemDetail({ id, title, image, price, count, description }) {
 
     const data = useContext(context)
-    const [quantityToAdd, setQuantityToAdd] = useState(true)
+    const [CountPrice, setCountPrice] = useState(true)
 
     
 
-
     const onAdd = (quantityToAdd) => {
 
-        setQuantityToAdd(quantityToAdd)
 
         const items = {id, title, image, price, description, quantityToAdd}
 
-        data.addItemToCart(items, quantityToAdd)
+        const itemPrice = quantityToAdd * items.price
 
+        setCountPrice(quantityToAdd)
+        
+        data.addItemToCart(items, itemPrice, quantityToAdd)
+
+    
     }
-
 
     return (
         <div className="cardDetail" key={id}>
@@ -31,7 +33,7 @@ function ItemDetail({ id, title, image, price, count, description }) {
                 <h2>$ {price}</h2>
                 <p>{description}</p>
                 <div>
-                    {quantityToAdd === true ? <ItemCount stock={count} initial={1} onAdd={onAdd} /> : <ButtonCart />}
+                    {CountPrice === true ? <ItemCount stock={count} initial={1} onAdd={onAdd} /> : <ButtonCart />}
                 </div>
             </div>
 

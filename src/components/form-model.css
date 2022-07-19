@@ -1,0 +1,51 @@
+.formBuy {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;  
+  width: 100%;
+}
+
+.resumePrice {
+    background: rgb(231, 245, 255);
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    color: rgb(163, 163, 163);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 50%;
+    margin: 3rem;
+  }
+ 
+  form input {
+    border: solid 2px gray;
+    border-radius: 0.2rem;
+    padding: 0.5rem 1rem;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+ 
+  }
+ 
+  form textarea {
+    border: solid 2px gray;
+    border-radius: 0.2rem;
+    padding: 0.5rem 1.1rem;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+  }

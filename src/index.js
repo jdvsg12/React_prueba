@@ -4,8 +4,10 @@ import Header from "../src/components/Header.jsx";
 import Main from "../src/components/Main.jsx";
 import Footer from "../src/components/Footer.jsx";
 import { BrowserRouter } from "react-router-dom";
-import "./index.css";
 import MyDataCart from "./components/CartContext.jsx";
+import "./index.css";
+
+
 
 const App = () => {
   return (

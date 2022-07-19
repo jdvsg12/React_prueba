@@ -2,8 +2,8 @@ import React, { useContext } from 'react';
 import { context } from './CartContext'
 import { Link } from "react-router-dom"
 import { CartListContainer } from './CartListContainer';
-import "./cart-model.css"
 import { CartEmpty } from './CartEmpty';
+import "./cart-model.css"
 
 
 
@@ -13,9 +13,12 @@ export const Cart = () => {
 
     return (
         <div className="CardContainer">
-
-            {data.countItem === 0 ? <CartEmpty /> : <CartListContainer />}
-
+            <div className='itmesContainer'>
+                {data.countItem === 0 ? <CartEmpty /> : <CartListContainer />}
+            </div>
+            <div>
+                {data.countItem === 0 ? null : <Link to="/form">Continuar Compra</Link>}
+            </div>
             <div className="btnCard">
                 <Link to="/">
                     <span className="material-symbols-outlined">
@@ -23,7 +26,7 @@ export const Cart = () => {
                     </span>
                     Volver
                 </Link>
-                <p>El precio total es {data.price}</p>
+                <p>El precio total es <b>${data.price}</b></p>
                 <button onClick={() => data.clear()}>Vaciar carrito</button>
             </div>
         </div>

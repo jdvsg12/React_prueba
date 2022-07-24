@@ -1,4 +1,6 @@
 import { createContext, useState } from "react";
+import Swal from 'sweetalert2'
+
 
 
 export const context = createContext()
@@ -18,6 +20,8 @@ const MyDataCart = ({ children }) => {
 
         calculateTotalPrice(updatedItems)
         calculateTotalItem(updatedItems)
+        SweetAlertAddItem()
+
 
         if (isOnCart(item.id)) {
             addItems(item, quantityToAdd)
@@ -36,20 +40,21 @@ const MyDataCart = ({ children }) => {
         setItems(updatedItems);
         calculateTotalPrice(updatedItems)
         calculateTotalItem(updatedItems)
+        SweetAlertDeleteItem()
     }
 
     const addItems = (item, quantityToAdd) => {
 
-
+        
         const newProducts = items.map(prod => {
 
-        
+
             if (prod.id === item.id) {
                 const newProduct = {
                     ...prod,
                     quantityToAdd: prod.quantityToAdd + quantityToAdd,
                 };
-            
+
                 return newProduct;
 
             } else { return prod; }
@@ -66,6 +71,7 @@ const MyDataCart = ({ children }) => {
         setPrice(0)
         setItems([])
         setCountItem(0)
+        sweetAlertDeleteAllItem()
     }
 
     const calculateTotalPrice = (cartItems) => {
@@ -93,6 +99,64 @@ const MyDataCart = ({ children }) => {
 
         setCountItem(totalCountItem)
 
+    }
+
+    const SweetAlertAddItem = () => {
+
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        })
+
+        Toast.fire({
+            icon: 'success',
+            title: 'Ha sido agregado a tu carrito'
+        })
+    }
+
+    const SweetAlertDeleteItem = () => {
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        })
+
+        Toast.fire({
+            icon: 'warning',
+            title: 'Ha sido eliminado de tu carrito'
+        })
+    }
+
+    const sweetAlertDeleteAllItem = () => {
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        })
+
+        Toast.fire({
+            icon: 'warning',
+            title: 'Vaciaste tu carrito'
+        })
     }
 
 

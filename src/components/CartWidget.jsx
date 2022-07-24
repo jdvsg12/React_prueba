@@ -11,7 +11,7 @@ export const CartWidgets = () => {
     return (
         <div className="cartItem">
             <Link to="/cart">
-            <span className="material-symbols-outlined">
+            <span id='shopping' className="material-symbols-outlined">
                 shopping_cart_checkout
             </span>
             </Link>

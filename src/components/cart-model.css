@@ -200,7 +200,7 @@ img {
 
   .CardContainer {
     display: flex;
-    min-height: 470px;
+    min-height: 480px;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -211,7 +211,7 @@ img {
     flex-direction: column;
     text-align: center;
     align-items: center;
-    height: 300px;
+    min-height: 560px;
     gap: 5rem;
     background: rgb(240, 240, 240);
     border-radius: 1rem;

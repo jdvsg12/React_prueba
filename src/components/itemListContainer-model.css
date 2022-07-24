@@ -1,77 +1,160 @@
-
 .ItemListContainer {
+  display: grid;
+  grid-template-rows: repeat(1, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.ItemDetailContainer {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-rows: repeat(1, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.cardItem {
+  display: flex;
+  flex-direction: column;
+  min-width: 42vh;
+  justify-content: space-around;
+  gap: 1rem;
+  align-items: center;
+  background: #fefefe;
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.39);
+  padding: 2rem;
+}
+
+.cardItem img {
+  object-fit: cover;
+  height: 40vh;
+  width: 35vh;
+  border-radius: 1rem;
+  margin: 0;
+}
+
+.cardItem p {
+  color: rgb(118, 118, 118);
+  text-align: center;
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.cardItem h1 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.cardItem button {
+  margin: 0;
+}
+
+.cardItem a {
+  padding: 1.3em 3em;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: solid 1px rgba(0, 0, 0, 0.404);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  outline: none;
+}
+
+.cardItem a:hover {
+  background-color: #17202A;
+  box-shadow: 0px 15px 20px #17202A35;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+@media screen and (max-width: 1024px) {
+  .ItemListContainer {
     display: grid;
     grid-template-rows: repeat(1, 1fr);
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
   }
-  
+
   .ItemDetailContainer {
     display: grid;
     justify-content: center;
     align-items: center;
     grid-template-rows: repeat(1, 1fr);
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3 1fr);
     gap: 1rem;
   }
-  
   .cardItem {
     display: flex;
     flex-direction: column;
-    width: 300px;
+    min-width: 30vh;
     justify-content: space-around;
     gap: 1rem;
     align-items: center;
     background: #fefefe;
-    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.39);
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.39);
     padding: 2rem;
-  
   }
-  
   .cardItem img {
     object-fit: cover;
-    height: 300px;
-    width: 250px;
+    height: 40vh;
+    width: 35vh;
     border-radius: 1rem;
     margin: 0;
   }
-  
   .cardItem p {
-    color:rgb(118, 118, 118);
-    text-align: center;
-    font-weight: bold;
-    font-size: 1rem;
-    margin: 0;
+    font-size: 0.8rem;
   }
   
   .cardItem h1 {
-    margin: 0;
-    font-size: 1rem;
-    font-weight: normal;
+    font-size: 0.8rem;
   }
-  .cardItem button {
-    margin: 0;
-  }
-  
   .cardItem a {
-    padding: 1.3em 3em;
-    font-size: 12px;
-    text-transform: uppercase;
-    text-decoration: none;
-    letter-spacing: 2.5px;
-    font-weight: 500;
-    color: #000;
-    background-color: #fff;
-    border: solid 1px rgba(0, 0, 0, 0.404);
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease 0s;
-    outline: none;
+    font-size: 0.7rem;
   }
-  
-  .cardItem a:hover {
-    background-color: #17202A;
-    box-shadow: 0px 15px 20px #17202A35;
-    color: #fff;
-    transform: translateY(-2px);
+}
+
+
+@media screen and (max-width: 768px) {
+
+  .ItemListContainer {
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
   }
 
+  .ItemDetailContainer {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(2 1fr);
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 481px) {
+
+  .ItemListContainer {
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+  }
+
+  .ItemDetailContainer {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(1 1fr);
+    gap: 1rem;
+  }
+}

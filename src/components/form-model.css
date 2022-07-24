@@ -7,12 +7,12 @@
 }
 
 .resumePrice {
-    background: rgb(231, 245, 255);
+    background: rgb(224, 224, 224);
     width: 50%;
     justify-content: center;
     align-items: center;
     padding: 2rem;
-    color: rgb(163, 163, 163);
+    color: rgb(83, 83, 83);
 }
 
 form {
@@ -48,4 +48,14 @@ form {
     letter-spacing: 2.5px;
     font-weight: 500;
     color: #000;
+  }
+
+  @media screen and (max-width: 768px) {
+    .formBuy {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: column-reverse;  
+      width: 100%;
+    }
   }

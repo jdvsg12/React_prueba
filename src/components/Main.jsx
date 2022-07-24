@@ -2,7 +2,7 @@ import ItemListContainer from "./ItemListContainer"
 import ItemDetailContainer from "./ItemDetailContainer"
 import { Routes, Route } from "react-router-dom"
 import { Cart } from "./Cart"
-import { Form } from "./Form"
+import { PaymentChanel } from "./PaymentChanel"
 
 const Main = () => {
     return (
@@ -10,7 +10,7 @@ const Main = () => {
             <Routes>
                 <Route path='/' element={<ItemListContainer />} />
                 <Route path='/cart' element={<Cart />} />
-                <Route path='/form' element={<Form />} />
+                <Route path='/paymentChanel' element={<PaymentChanel />} />
                 <Route path='/detail/:id' element={<ItemDetailContainer />} />
                 <Route path='/category/:category' element={<ItemListContainer />} />
             </Routes>

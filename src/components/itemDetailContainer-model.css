@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
     gap: 3rem;
     padding: 3rem;
 }
@@ -23,11 +24,14 @@
 }
 
 .countItem {
-    padding: 1.3em 3em;
+    display: flex;
+    flex-direction: column;
+    padding: 1.3em 1rem;
     text-transform: uppercase;
     letter-spacing: 2.5px;
     font-weight: 500;
     color: #000;
+    gap: 2rem;
     text-align: center;
     width: 100%;
 }
@@ -35,6 +39,7 @@
 .btnCount {
     display: flex;
     flex-direction: row;
+    align-items: center;
     gap: 0.5em;
     justify-content: center;
     margin-bottom: 1rem;
@@ -65,4 +70,79 @@
 
 .btnCount p {
     width: 50px
+}
+
+@media screen and (max-width: 1024px) {
+    .cardDetail {
+        display: flex;
+        gap: 0.5rem;
+        padding: 1rem 0;
+    }
+    
+    .cardDetail img {
+        object-fit: cover;
+        height: 250px;
+        width: 200px;
+        border-radius: 1rem;
+        margin: 0;
+    }
+    
+    .cardDetail h2 {
+        font-weight: 600;
+    }
+    .cardDetail h1 {
+        font-size: 1.6rem;
+    }
+    
+    .DetailInfo {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 35%;
+        gap: 1rem;
+    }
+    .btnCount button {
+        padding: 1.3em 1rem;
+        font-size: 8.5px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .cardDetail {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 1rem 0;
+    }
+    
+    .cardDetail img {
+        object-fit: cover;
+        height: 150px;
+        width: 100px;
+        border-radius: 1rem;
+        margin: 0;
+    }
+    
+    .cardDetail h2 {
+        font-weight: 600;
+    }
+    .cardDetail h1 {
+        font-size: 1.4rem;
+    }
+    
+    .DetailInfo {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 70%;
+        gap: 1rem;
+    }
+
+    .btnCount {
+        display: flex;
+        justify-content: center;
+    }
+    .btnCount button {
+        padding: 1.3em 1rem;
+        font-size: 8.5px;
+    }
 }

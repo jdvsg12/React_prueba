@@ -8,13 +8,16 @@ const Provider = context.Provider
 const MyDataCart = ({ children }) => {
     const [items, setItems] = useState([])
     const [price, setPrice] = useState([])
+    const [countItem, setCountItem] = useState(0)
+    const [idBuy, setIdBuy] = useState([])
 
 
     const addItemToCart = (item, quantityToAdd) => {
-debugger
+        debugger
         const updatedItems = items.concat(item);
 
         calculateTotalPrice(updatedItems)
+        calculateTotalItem(updatedItems)
 
         if (isOnCart(item.id)) {
             addItems(item, quantityToAdd)
@@ -28,21 +31,25 @@ debugger
 
 
     const removeItemFromCart = (id) => {
+
         const updatedItems = items.filter(prod => prod.id !== id);
-        console.log(updatedItems)
         setItems(updatedItems);
         calculateTotalPrice(updatedItems)
+        calculateTotalItem(updatedItems)
     }
 
     const addItems = (item, quantityToAdd) => {
 
+
         const newProducts = items.map(prod => {
 
+        
             if (prod.id === item.id) {
                 const newProduct = {
                     ...prod,
                     quantityToAdd: prod.quantityToAdd + quantityToAdd,
                 };
+            
                 return newProduct;
 
             } else { return prod; }
@@ -56,14 +63,15 @@ debugger
 
     const clear = () => {
 
-        setPrice([])
+        setPrice(0)
         setItems([])
+        setCountItem(0)
     }
 
     const calculateTotalPrice = (cartItems) => {
         if (cartItems.length === 0) return setPrice(0);
 
-        const totalPrice = cartItems.reduce((total, {price, quantityToAdd}) => {
+        const totalPrice = cartItems.reduce((total, { price, quantityToAdd }) => {
 
             return (price * quantityToAdd) + total
 
@@ -72,9 +80,25 @@ debugger
         setPrice(totalPrice)
     }
 
+    const calculateTotalItem = (cartItems) => {
+
+        if (cartItems.length === 0) return setCountItem(0);
+
+
+        const totalCountItem = cartItems.reduce((count, { quantityToAdd }) => {
+
+            return quantityToAdd + count
+
+        }, 0)
+
+        setCountItem(totalCountItem)
+
+    }
+
 
     const dataOfContext = {
-        countItem: items.length,
+        idBuy,
+        countItem: countItem,
         item: items,
         price: price,
         addItemToCart,
@@ -82,6 +106,9 @@ debugger
         addCant: addItems,
         isOnCart,
         clear,
+        setIdBuy,
+        setItems,
+        setCountItem
     }
 
     return (

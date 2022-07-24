@@ -11,14 +11,15 @@ export const Cart = () => {
 
     const data = useContext(context)
 
+    console.log(data.countItem)
+
     return (
         <div className="CardContainer">
             <div className='itmesContainer'>
-                {data.countItem === 0 ? <CartEmpty /> : <CartListContainer />}
+                {data.countItem.length === 0 | data.countItem === 0? <CartEmpty /> : <CartListContainer />}
             </div>
-            <div>
-                {data.countItem === 0 ? null : <Link to="/form">Continuar Compra</Link>}
-            </div>
+            <h1>El precio total es <b>${data.price}</b></h1>
+
             <div className="btnCard">
                 <Link to="/">
                     <span className="material-symbols-outlined">
@@ -26,7 +27,6 @@ export const Cart = () => {
                     </span>
                     Volver
                 </Link>
-                <p>El precio total es <b>${data.price}</b></p>
                 <button onClick={() => data.clear()}>Vaciar carrito</button>
             </div>
         </div>

@@ -1,123 +1,298 @@
- button {
-   padding: 1rem 3rem;
-   height: 3rem;
-   font-size: 12px;
-   text-transform: uppercase;
-   text-decoration: none;
-   letter-spacing: 2.5px;
-   font-weight: 500;
-   color: #000;
-   background-color: rgba(224, 224, 224, 0.405);
-   border: solid 1px rgba(0, 0, 0, 0.404);
-   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-   transition: all 0.3s ease 0s;
-   outline: none;
- }
+.CardContainer {
+  display: flex;
+  min-height: 496px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
 
- button:hover {
-   background-color: #eaeaea;
-   box-shadow: 0px 15px 20px #17202A35;
-   color: #000;
-   transform: translateY(-2px);
- }
+.material-symbols-outlined {
+  color: gray;
+}
 
- img {
-   object-fit: cover;
-   height: 150px;
-   width: 100px;
-   border-radius: 1rem;
-   margin: 0;
- }
+.itemsContainer {
+  margin: 1rem 0;
+}
 
- .CardContainer h1 {
-   font-size: 1rem;
-   overflow-wrap: break-word;
-   width: 40rem;
- }
+.CardContainer h1 {
+  font-size: 1rem;
+}
 
- .containerDescription {
-   width: 30%;
- }
+.containerDescription {
+  width: 30%;
+}
 
- .CardItem {
-   display: flex;
-   flex-direction: row;
-   justify-content: space-between;
-   align-items: center;
-   background: rgb(240, 240, 240);
-   border-radius: 1rem;
-   padding: 3rem;
-   margin: 1rem;
- }
+.detailItem {
+  margin: 0rem;
+  padding: 1rem;
+}
 
- .btnCard {
-   display: flex;
-   flex-direction: row;
-   justify-content: space-between;
-   align-items: flex-end;
-   width: 100%;
- }
+#a {
+  border: none;
+  background: none;
+  margin: 0;
+  box-shadow: none;
+}
 
- .CardContainer a {
-   display: flex;
-   align-items: center;
-   padding: 0 4rem;
-   height: 3rem;
-   font-size: 12px;
-   text-align: center;
-   text-transform: uppercase;
-   text-decoration: none;
-   letter-spacing: 2.5px;
-   font-weight: 500;
-   color: #000;
-   background-color: rgba(224, 224, 224, 0.405);
-   border: solid 1px rgba(0, 0, 0, 0.404);
-   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-   transition: all 0.3s ease 0s;
-   outline: none;
- }
+.detailItem a {
+  border: none;
+  background: none;
+}
 
- .CardContainer {
-   display: flex;
-   min-height: 496px;
-   flex-direction: column;
-   justify-content: space-between;
-   align-items: center;
- }
+.detailItem h1 {
+  text-align: left;
+}
 
- .CardContainer a:hover {
-   background-color: #eaeaea;
-   box-shadow: 0px 15px 20px #17202A35;
-   color: #000;
-   transform: translateY(-2px);
- }
+.detailItem p {
+  padding: 0 2rem;
+}
 
- .CartEmpty {
-   display: flex;
-   flex-direction: row;
-   text-align: center;
-   align-items: center;
-   height: 318px;
-   gap: 5rem;
-   background: rgb(240, 240, 240);
-   border-radius: 1rem;
-   padding: 3rem;
-   margin: 1rem;
- }
+.CardItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(240, 240, 240);
+  border-radius: 1rem;
+  padding: 3rem;
+  margin: 1rem;
+}
 
- .CartEmpty h1 {
-   font-size: 1.2rem;
-   letter-spacing: 2.5px;
-   text-transform: uppercase;
-   color: rgb(164, 163, 163);
- }
+.btnCard {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
 
- .btnCard p {
-   font-size: 12px;
-   text-transform: uppercase;
-   text-decoration: none;
-   letter-spacing: 2.5px;
-   font-weight: 500;
-   color: #000;
- }
+.btnCard button {
+  padding: 0 4rem;
+  text-overflow: ellipsis;
+  height: 3rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  color: #000;
+  background-color: rgba(224, 224, 224, 0.405);
+  border: solid 1px rgba(0, 0, 0, 0.404);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+}
 
+.btnCard button:hover {
+  background-color: #eaeaea;
+  box-shadow: 0px 15px 20px #17202A35;
+  color: #000;
+  transform: translateY(-2px);
+}
+
+img {
+  object-fit: cover;
+  height: 150px;
+  width: 100px;
+  border-radius: 1rem;
+  margin: 0;
+}
+
+.CardItem a {
+  margin: 3rem 0;
+  border: none;
+  background: none;
+  font-size: 1rem;
+}
+
+.CardContainer a {
+  display: flex;
+  height: 3rem;
+  max-width: 100%;
+  font-size: 1rem;
+  font-weight: 500;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+  color: #000;
+  background-color: rgba(224, 224, 224, 0.405);
+  border: solid 1px rgba(0, 0, 0, 0.404);
+}
+
+
+.CardContainer a:hover {
+  background-color: #eaeaea;
+  box-shadow: 0px 15px 20px #17202A35;
+  color: #000;
+  transform: translateY(-2px);
+}
+
+.CardItem button {
+  border: none;
+}
+
+.CartEmpty {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+  height: 318px;
+  gap: 2rem;
+  background: rgb(240, 240, 240);
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.CartEmpty h1 {
+  font-size: 1.2rem;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: rgb(164, 163, 163);
+}
+
+.CartEmpty h2 {
+  color:#000;
+}
+
+.CartEmpty a {
+  display: flex;
+  height: 3rem;
+  max-width: 100%;
+  font-size: 1rem;
+  font-weight: 500;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+  color: #000;
+  background-color: rgba(224, 224, 224, 0.405);
+  border: solid 1px rgba(0, 0, 0, 0.404);
+}
+.CartEmpty a:hover{
+  background-color: #eaeaea;
+  box-shadow: 0px 15px 20px #17202A35;
+  color: #000;
+  transform: translateY(-2px);
+}
+
+.btnCard p {
+  font-size: 12px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+}
+
+.buyBotton {
+  display: flex;
+  justify-content: center;
+  padding: 0 0 3rem 0;
+  border-bottom: solid 1px rgb(201, 200, 200);
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+
+  .detailItem p {
+    padding: 1rem 0rem;
+  }
+
+  .itemsContainer {
+    margin: 1rem 0;
+  }
+
+  .CardContainer {
+    display: flex;
+    min-height: 470px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .CartEmpty {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    height: 300px;
+    gap: 5rem;
+    background: rgb(240, 240, 240);
+    border-radius: 1rem;
+    padding: 3rem;
+    margin: 0.1rem;
+  }
+  .CartEmpty h1 {
+    font-size: 1rem;
+  }
+  .CartEmpty h2 {
+    font-size: 0.8rem;
+    color:#000;
+  }
+
+  .CardContainer a {
+    display: flex;
+    height: 3rem;
+    font-size: 1rem;
+    font-weight: 500;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+    color: #000;
+    background-color: rgba(224, 224, 224, 0.405);
+    border: solid 1px rgba(0, 0, 0, 0.404);
+  }
+
+  .btnCard {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: space-around;
+    margin: 1rem 0;
+  }
+
+  .CardItem {
+    display: flex;
+    flex-direction: column;
+    background: rgb(240, 240, 240);
+    border-radius: 1rem;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+  }
+
+  .CardItem a {
+    margin: 3rem 0;
+    border: none;
+    background: none;
+    font-size: 1rem;
+  }
+
+  .CardItem p {
+    text-align: center;
+  }
+
+  .CardItem button {
+    padding: 0 3rem;
+    text-overflow: ellipsis;
+    height: 3rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: #000;
+    /* background-color: rgba(224, 224, 224, 0.405);
+    border: solid 1px rgba(0, 0, 0, 0.404);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s; */
+  }
+
+  .detailItem {
+    margin: 1rem;
+  }
+
+  #a {
+    padding: 0;
+    text-align: center;
+  }
+
+  .buyBotton {
+    padding: 0 0 3rem 0;
+    border-bottom: solid 1px rgb(201, 200, 200);
+    margin-bottom: 1rem;
+  }
+}

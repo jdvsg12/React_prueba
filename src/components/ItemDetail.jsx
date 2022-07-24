@@ -13,14 +13,13 @@ function ItemDetail({ id, title, image, price, count, description }) {
 
     const onAdd = (quantityToAdd) => {
 
-
+        
         const items = {id, title, image, price, description, quantityToAdd}
 
-        const itemPrice = quantityToAdd * items.price
 
         setCountPrice(quantityToAdd)
         
-        data.addItemToCart(items, itemPrice, quantityToAdd)
+        data.addItemToCart(items, quantityToAdd)
 
     
     }

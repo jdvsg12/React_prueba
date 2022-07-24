@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-// import { productsPromise } from '../utils/productsPromise';
 import ItemList from './ItemList';
 import { Loader } from './Loader'
 import { db } from "../utils/firebase.js"
@@ -22,8 +21,6 @@ const ItemListContainer = () => {
         const refProducts = category ? query( collectionProducts , where('category', '==', category) ) :  collectionProducts
         const dataFirebase = getDocs(refProducts)
 
-
-
         setLoading(true)
 
         dataFirebase
@@ -42,14 +39,6 @@ const ItemListContainer = () => {
 
             })
 
-        // productsPromise(category)
-        //     .then(resolve => {
-        //         setItems(resolve)
-        //         setLoading(false)
-        //     })
-        //     .catch(error => {
-        //         console.log(error);
-        //     })
     }, [category])
 
 

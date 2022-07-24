@@ -1,6 +1,5 @@
 import React from 'react'
 import { useState, useEffect } from "react"
-// import { getProductsIdPromise } from '../utils/productsPromise';
 import { useParams } from 'react-router-dom'
 import ItemDetail from './ItemDetail';
 import { db } from "../utils/firebase.js"
@@ -22,16 +21,9 @@ const ItemDetailContainer = () => {
         dataFirebase
             .then(resolve => {
                 const objFirebase = resolve.data()
-
                     objFirebase.id = resolve.id
-
                     setProduct(objFirebase)
                 })
-
-        // getProductsIdPromise(1000, parseInt(id))
-        //     .then(resolve => {
-        //         setProduct(resolve)
-            // })
 
     }, [id])
 

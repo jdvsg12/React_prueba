@@ -1,0 +1,103 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+
+}
+
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgb(204, 204, 204);
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 2.5px;
+    transition: all 0.3s ease 0s;
+    color: white;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 2rem;
+    height: 8vh;
+    background: rgb(0, 33, 65);
+}
+
+.navBrand {
+    text-transform: uppercase;
+}
+
+.navMenu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 3rem;
+}
+
+.navToggler {
+    cursor: pointer;
+    display: none;
+}
+
+.navToggler div {
+    width: 2rem;
+    height: 0.2rem;
+    margin: 0.4rem;
+    background: rgb(204, 204, 204);
+    transition: 0.3s ease-in;
+}
+
+@media screen and (max-width: 768px) {
+
+    .navToggler {
+        display: block;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    .navMenu {
+        position: fixed;
+        top: 0px;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 80%;
+        background: rgb(0, 33, 65);
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: 0.5s ease-in;
+        padding: 2rem 0rem;
+    }
+    a {
+        font-size: 1rem;
+        letter-spacing: 2.5px;
+    }
+}
+
+/* Active Class */
+.navActive {
+    transform: translateX(0%);
+}
+
+/* Toggle Icon Animation */
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-9px, 4px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-9px, -5px);
+}

@@ -5,7 +5,7 @@ import './cartWidget-model.css'
 
 export const ButtonCart = () => {
 return (
-    <div className='btnCount'>
+    <div className='btnCountCar'>
         <Link to="/cart">carrito</Link>
     </div>
     )

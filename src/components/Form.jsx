@@ -66,9 +66,9 @@ export const Form = () => {
         <div className="formBuy">
             <form onSubmit={handleSubmit}>
                 <h2>Formulario de compra</h2>
-                <input type="text" id="name" placeholder="Nombre" onChange={handleChange} name="name" />
-                <input type="email" id="email" placeholder="Email" onChange={handleChange} name="email" />
-                <input type="text" id="phone" placeholder="Telefono" onChange={handleChange} name="phone" />
+                <input type="text" id="name" placeholder="Nombre" onChange={handleChange} name="name" required />
+                <input type="email" id="email" placeholder="Email" onChange={handleChange} name="email" requiered/>
+                <input type="text" id="phone" placeholder="Telefono" onChange={handleChange} name="phone" required/>
                 <textarea id="message" placeholder="Agregar información" onChange={handleChange} name="message"></textarea>
                 <button>comprar</button>
             </form>

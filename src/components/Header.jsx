@@ -24,18 +24,18 @@ const Header = ({ Test }) => {
                 </Link>
                 <ul className={active}>
                     <li className="naveItem">
-                        <Link to='/category/men'>men</Link>
+                        <Link onClick={navToggler} to='/category/men'>men</Link>
                     </li>
                     <li className="naveItem">
-                        <Link to='/category/women'>women</Link>
+                        <Link onClick={navToggler} to='/category/women'>women</Link>
                     </li>
                     <li className="naveItem">
-                        <Link to='/category/electronics'>electronic</Link>
+                        <Link onClick={navToggler} to='/category/electronics'>electronic</Link>
                     </li>
                     <li className="naveItem">
-                        <Link to='/category/jewelery'> jewelery</Link>
+                        <Link onClick={navToggler} to='/category/jewelery'> jewelery</Link>
                     </li>
-                    <li className="naveItem">
+                    <li onClick={navToggler} className="naveItem">
                         <CartWidgets />
                     </li>
                 </ul>

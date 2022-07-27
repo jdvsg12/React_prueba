@@ -51,6 +51,14 @@ form {
   }
 
   @media screen and (max-width: 768px) {
+    .resumePrice {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      width: 90%;
+  }
+
+  
     .formBuy {
       display: flex;
       justify-content: space-around;

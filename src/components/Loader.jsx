@@ -6,8 +6,8 @@ export const LoaderSkeleton = () => {
 
     return (
         <div>
-            <Skeleton height={250} width={360} />
-            <Skeleton count={5} width={360} />
+            <Skeleton height={250} width={345} />
+            <Skeleton count={5} width={345} />
         </div>
     )
 }

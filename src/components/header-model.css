@@ -26,7 +26,7 @@ a {
     align-items: center;
     justify-content: space-between;
     padding: 2rem 2rem;
-    height: 8vh;
+    height: 10vh;
     background: rgb(0, 33, 65);
 }
 
@@ -59,7 +59,7 @@ a {
     .navToggler {
         display: block;
         cursor: pointer;
-        z-index: 1;
+        z-index: 9999;
     }
 
     .navMenu {
